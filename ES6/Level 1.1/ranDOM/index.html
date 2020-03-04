@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6.1 Aleatorios e intentos.</title>
+</head>
+<body>
+    <!-- GeeksHubs Formacion -->
+
+    <!-- Metodología 1 -->
+    <label for="">Número de intentos: 
+        <p id="intentos"></p>
+    </label>
+
+    <label for="">El número aleatorio era:  
+        <p id="NumeroAleatorio"></p>
+    </label>
+
+    <!-- Metodología 2 -->
+    <!-- <div id="resultado"></div>-->
+
+    <!-- Código JavaScript -->
+    <script>
+
+        /*SOLUCION METODOLOGÍA 1*/
+        const MAX_INTENTOS = 5;
+        let intentos = 0;
+        let pregunta = "";
+
+        let pIntentos = document.getElementById('intentos');
+        let pAleatorio = document.getElementById('NumeroAleatorio');
+
+        //Generamos el número aleatorio y lo depositamos
+        let numAleatorio = Math.floor(Math.random() * 10 + 1);
+
+        //Check en consola del num aleatorio
+        console.log(numAleatorio);
+
+        for(let i= 1; i < MAX_INTENTOS; i++) {
+
+            //Preguntamos al usuario
+            let pregunta = prompt('Dime un Numero del 1 al 10');
+
+            //Check pregunta
+            console.log('Pregunta: ' + pregunta);
+
+            //En caso de que el valor de pregunta sea estrictamente igual al valor de numAleatorio
+            if( pregunta === numAleatorio.toString()){
+                console.log('HAS GANADO');
+                intentos = i;
+                console.log('N Intento : ' + intentos);
+                break;
+            }else{
+                console.log('HAS PERDIDO');
+                intentos = i;
+                console.log('N Intento: ' + intentos);
+            }
+
+            //Asignamos el valor con el número de intentos a pIntentos 
+            pIntentos.innerHTML = intentos;
+
+        }
+
+        //Asignamos el valor del número aleatorio a pAleatorio
+        pAleatorio.innerHTML = numAleatorio;
+
+        /*SOLUCION METODOLOGÍA 2*/
+        /*
+
+        let random_cpu = parseInt(Math.random() * (11 - 1) + 1);
+
+        //Check random number
+        console.log(random_cpu);
+
+        let q = Number(prompt ("¿Puedes decirme un número aleatorio del 1 al 10 para tratar de acertar?"));
+
+        //Check question
+        console.log(q);
+
+        let nodoShow = document.getElementById('resultado');
+        let newElement = document.createElement('p');
+        let intentos = 1;
+
+        while (q != random_cpu){
+
+            q = Number(prompt ("Dímelo de nuevo! No era el correcto"));
+            console.log(q);
+            if(q != random_cpu){
+                intentos++;
+            }
+        }
+
+        let elementText = document.createTextNode(`El número que me has dicho es el correcto y has necesitado ${intentos} intentos.`);
+        
+        newElement.appendChild(elementText);
+        nodoShow.appendChild(newElement)
+        
+        */
+
+    </script>
+</body>
+</html>

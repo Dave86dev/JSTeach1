@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Tabla de multiplicar.</title>
+</head>
+
+<body>
+    <!-- GeeksHubs Formacion -->
+
+    
+    <p><b>La tabla de multiplicar en html:</b></p></br>
+
+
+    <table>
+        <script>
+
+            let res = "";
+            let nodo = "";
+
+            //Escoge un número base para la tabla
+            let numTabla = 5;
+
+            for (let i = 1; i <= 10; i++) {
+
+                res = numTabla * i;
+                //Concatenación de una nueva fila
+                nodo += `<tr><td>5 X ${i} es igual a : ${res} </td></tr>`;
+
+            }
+
+            document.write(`<table> ${nodo} </table>`);
+
+            
+        </script>
+    </table>
+</body>
+
+</html>

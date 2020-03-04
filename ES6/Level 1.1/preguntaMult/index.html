@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ES6.2 Pregunta y multiplica.</title>
+    </head>
+    <body>
+        <!-- GeeksHubs Formacion -->
+
+        <p class="resultado"></p>
+
+        <script>
+            let nodeAsk = document.getElementsByClassName("resultado");
+
+            //Envolvemos prompt dentro del constructor Number para obtener un valor numérico operable
+            let num1 = Number(prompt("Hola, ¿me facilitas el primer número?"));
+            let num2 = Number(prompt("Hola, ¿me facilitas el segundo número?"));
+
+            console.log("El primer número es: ", num1);
+            console.log("El segundo número es: ", num2);
+
+            //Recordemos que la clase nos devuelve un array y tenemos que saber que elemento hemos cogido de tipo clase.. [0] en este caso
+            nodeAsk[0].innerHTML = `El resultado de  ${num1} multiplicado por ${num2} es ${num1 * num2}`;
+
+            console.log(nodeAsk[0].innerHTML);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "idleHeartbeats": 260,
+    "navigatingHeartbeats": 97,
+    "totalCodingHeartbeats": 527,
+    "languageHeartbeats": {
+        "html": 132,
+        "javascript": 385,
+        "jsonc": 10
+    },
+    "fileHeartbeats": {
+        "index.html": 131,
+        "js/app.js": 385,
+        ".vscode/settings.json": 10,
+        "d:\\GeeksHubs\\teaching\\exercise\\ES6\\Level 1.1\\tablaMult\\index.html": 1
+    }
+}
